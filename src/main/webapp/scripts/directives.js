@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('esdemoApp')
+angular.module('elasticsdemoApp')
     .directive('activeMenu', function($translate, $locale, tmhDynamicLocale) {
         return {
             restrict: 'A',

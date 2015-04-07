@@ -2,7 +2,7 @@
 
 /* Services */
 
-esdemoApp.factory('LanguageService', function ($http, $translate, LANGUAGES) {
+elasticsdemoApp.factory('LanguageService', function ($http, $translate, LANGUAGES) {
         return {
             getBy: function(language) {
                 if (language == undefined) {
@@ -20,34 +20,34 @@ esdemoApp.factory('LanguageService', function ($http, $translate, LANGUAGES) {
         };
     });
 
-esdemoApp.factory('Register', function ($resource) {
+elasticsdemoApp.factory('Register', function ($resource) {
         return $resource('app/rest/register', {}, {
         });
     });
 
-esdemoApp.factory('Activate', function ($resource) {
+elasticsdemoApp.factory('Activate', function ($resource) {
         return $resource('app/rest/activate', {}, {
             'get': { method: 'GET', params: {}, isArray: false}
         });
     });
 
-esdemoApp.factory('Account', function ($resource) {
+elasticsdemoApp.factory('Account', function ($resource) {
         return $resource('app/rest/account', {}, {
         });
     });
 
-esdemoApp.factory('Password', function ($resource) {
+elasticsdemoApp.factory('Password', function ($resource) {
         return $resource('app/rest/account/change_password', {}, {
         });
     });
 
-esdemoApp.factory('Sessions', function ($resource) {
+elasticsdemoApp.factory('Sessions', function ($resource) {
         return $resource('app/rest/account/sessions/:series', {}, {
             'get': { method: 'GET', isArray: true}
         });
     });
 
-esdemoApp.factory('MetricsService',function ($http) {
+elasticsdemoApp.factory('MetricsService',function ($http) {
     		return {
             get: function() {
                 var promise = $http.get('metrics/metrics').then(function(response){
@@ -58,7 +58,7 @@ esdemoApp.factory('MetricsService',function ($http) {
         };
     });
 
-esdemoApp.factory('ThreadDumpService', function ($http) {
+elasticsdemoApp.factory('ThreadDumpService', function ($http) {
         return {
             dump: function() {
                 var promise = $http.get('dump').then(function(response){
@@ -69,7 +69,7 @@ esdemoApp.factory('ThreadDumpService', function ($http) {
         };
     });
 
-esdemoApp.factory('HealthCheckService', function ($rootScope, $http) {
+elasticsdemoApp.factory('HealthCheckService', function ($rootScope, $http) {
         return {
             check: function() {
                 var promise = $http.get('health').then(function(response){
@@ -80,7 +80,7 @@ esdemoApp.factory('HealthCheckService', function ($rootScope, $http) {
         };
     });
 
-esdemoApp.factory('ConfigurationService', function ($rootScope, $filter, $http) {
+elasticsdemoApp.factory('ConfigurationService', function ($rootScope, $filter, $http) {
     return {
         get: function() {
             var promise = $http.get('configprops').then(function(response){
@@ -96,14 +96,14 @@ esdemoApp.factory('ConfigurationService', function ($rootScope, $filter, $http) 
     };
 });
 
-esdemoApp.factory('LogsService', function ($resource) {
+elasticsdemoApp.factory('LogsService', function ($resource) {
         return $resource('app/rest/logs', {}, {
             'findAll': { method: 'GET', isArray: true},
             'changeLevel':  { method: 'PUT'}
         });
     });
 
-esdemoApp.factory('AuditsService', function ($http) {
+elasticsdemoApp.factory('AuditsService', function ($http) {
         return {
             findAll: function() {
                 var promise = $http.get('app/rest/audits/all').then(function (response) {
@@ -120,7 +120,7 @@ esdemoApp.factory('AuditsService', function ($http) {
         }
     });
 
-esdemoApp.factory('Session', function () {
+elasticsdemoApp.factory('Session', function () {
         this.create = function (login, firstName, lastName, email, userRoles) {
             this.login = login;
             this.firstName = firstName;
@@ -138,7 +138,7 @@ esdemoApp.factory('Session', function () {
         return this;
     });
 
-esdemoApp.factory('AuthenticationSharedService', function ($rootScope, $http, authService, Session, Account) {
+elasticsdemoApp.factory('AuthenticationSharedService', function ($rootScope, $http, authService, Session, Account) {
         return {
             login: function (param) {
                 var data ="j_username=" + encodeURIComponent(param.username) +"&j_password=" + encodeURIComponent(param.password) +"&_spring_security_remember_me=" + param.rememberMe +"&submit=Login";

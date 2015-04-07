@@ -1,7 +1,7 @@
 {
-  "name": "esdemo",
+  "name": "elasticsdemo",
   "version": "0.0.0",
-  "description": "Description for esdemo",
+  "description": "Description for elasticsdemo",
   "dependencies": {
   },
   "devDependencies": {

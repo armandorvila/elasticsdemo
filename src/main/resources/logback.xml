@@ -27,7 +27,7 @@
     </appender>
 -->
 
-    <logger name="com.armandorv.esdemo" level="DEBUG"/>
+    <logger name="com.armandorv.elasticsdemo" level="DEBUG"/>
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.xml.bind" level="WARN"/>

@@ -6,7 +6,7 @@ security.basic.enabled: false
 endpoints.jolokia.enabled: false
 
 # security configuration (this key should be unique for your application, and kept secret)
-jhipster.security.rememberme.key: esdemo
+jhipster.security.rememberme.key: elasticsdemo
 
 async:
     corePoolSize: 2
@@ -22,14 +22,14 @@ spring:
         protocol: smtp
         tls: false
         auth: false
-        from: esdemo@localhost
+        from: elasticsdemo@localhost
 
     messageSource:
         cacheSeconds: 1
 
 swagger:
-    title: esdemo API
-    description: esdemo applications and beyond!
+    title: elasticsdemo API
+    description: elasticsdemo applications and beyond!
     termsOfServiceUrl: http://jhipster.github.io/
     contact:
     license: Apache 2.0

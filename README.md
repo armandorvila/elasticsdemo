@@ -1,2 +1,2 @@
-README for esdemo
+README for elasticsdemo
 ==========================

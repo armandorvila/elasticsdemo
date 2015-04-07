@@ -1,8 +1,8 @@
 {
   "generator-jhipster": {
-    "baseName": "esdemo",
-    "packageName": "com.armandorv.esdemo",
-    "packageFolder": "com/armandorv/esdemo",
+    "baseName": "elasticsdemo",
+    "packageName": "com.armandorv.elasticsdemo",
+    "packageFolder": "com/armandorv/elasticsdemo",
     "authenticationType": "cookie",
     "hibernateCache": "hazelcast",
     "clusteredHttpSession": "hazelcast",

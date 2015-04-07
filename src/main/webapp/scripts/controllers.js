@@ -2,13 +2,13 @@
 
 /* Controllers */
 
-esdemoApp.controller('MainController', function ($scope) {
+elasticsdemoApp.controller('MainController', function ($scope) {
     });
 
-esdemoApp.controller('AdminController', function ($scope) {
+elasticsdemoApp.controller('AdminController', function ($scope) {
     });
 
-esdemoApp.controller('LanguageController', function ($scope, $translate, LanguageService) {
+elasticsdemoApp.controller('LanguageController', function ($scope, $translate, LanguageService) {
         $scope.changeLanguage = function (languageKey) {
             $translate.use(languageKey);
 
@@ -22,10 +22,10 @@ esdemoApp.controller('LanguageController', function ($scope, $translate, Languag
         });
     });
 
-esdemoApp.controller('MenuController', function ($scope) {
+elasticsdemoApp.controller('MenuController', function ($scope) {
     });
 
-esdemoApp.controller('LoginController', function ($scope, $location, AuthenticationSharedService) {
+elasticsdemoApp.controller('LoginController', function ($scope, $location, AuthenticationSharedService) {
         $scope.rememberMe = true;
         $scope.login = function () {
             AuthenticationSharedService.login({
@@ -36,11 +36,11 @@ esdemoApp.controller('LoginController', function ($scope, $location, Authenticat
         }
     });
 
-esdemoApp.controller('LogoutController', function ($location, AuthenticationSharedService) {
+elasticsdemoApp.controller('LogoutController', function ($location, AuthenticationSharedService) {
         AuthenticationSharedService.logout();
     });
 
-esdemoApp.controller('SettingsController', function ($scope, Account) {
+elasticsdemoApp.controller('SettingsController', function ($scope, Account) {
         $scope.success = null;
         $scope.error = null;
         $scope.settingsAccount = Account.get();
@@ -65,7 +65,7 @@ esdemoApp.controller('SettingsController', function ($scope, Account) {
         };
     });
 
-esdemoApp.controller('RegisterController', function ($scope, $translate, Register) {
+elasticsdemoApp.controller('RegisterController', function ($scope, $translate, Register) {
         $scope.success = null;
         $scope.error = null;
         $scope.doNotMatch = null;
@@ -99,7 +99,7 @@ esdemoApp.controller('RegisterController', function ($scope, $translate, Registe
         }
     });
 
-esdemoApp.controller('ActivationController', function ($scope, $routeParams, Activate) {
+elasticsdemoApp.controller('ActivationController', function ($scope, $routeParams, Activate) {
         Activate.get({key: $routeParams.key},
             function (value, responseHeaders) {
                 $scope.error = null;
@@ -111,7 +111,7 @@ esdemoApp.controller('ActivationController', function ($scope, $routeParams, Act
             });
     });
 
-esdemoApp.controller('PasswordController', function ($scope, Password) {
+elasticsdemoApp.controller('PasswordController', function ($scope, Password) {
         $scope.success = null;
         $scope.error = null;
         $scope.doNotMatch = null;
@@ -133,7 +133,7 @@ esdemoApp.controller('PasswordController', function ($scope, Password) {
         };
     });
 
-esdemoApp.controller('SessionsController', function ($scope, resolvedSessions, Sessions) {
+elasticsdemoApp.controller('SessionsController', function ($scope, resolvedSessions, Sessions) {
         $scope.success = null;
         $scope.error = null;
         $scope.sessions = resolvedSessions;
@@ -151,7 +151,7 @@ esdemoApp.controller('SessionsController', function ($scope, resolvedSessions, S
         };
     });
 
- esdemoApp.controller('HealthController', function ($scope, HealthCheckService) {
+ elasticsdemoApp.controller('HealthController', function ($scope, HealthCheckService) {
      $scope.updatingHealth = true;
 
      $scope.refresh = function() {
@@ -176,11 +176,11 @@ esdemoApp.controller('SessionsController', function ($scope, resolvedSessions, S
      }
  });
 
-esdemoApp.controller('ConfigurationController', function ($scope, resolvedConfiguration) {
+elasticsdemoApp.controller('ConfigurationController', function ($scope, resolvedConfiguration) {
     $scope.configuration = resolvedConfiguration;
 });
 
-esdemoApp.controller('MetricsController', function ($scope, MetricsService, HealthCheckService, ThreadDumpService) {
+elasticsdemoApp.controller('MetricsController', function ($scope, MetricsService, HealthCheckService, ThreadDumpService) {
         $scope.metrics = {};
 		$scope.updatingMetrics = true;
 
@@ -260,7 +260,7 @@ esdemoApp.controller('MetricsController', function ($scope, MetricsService, Heal
         };
     });
 
-esdemoApp.controller('LogsController', function ($scope, resolvedLogs, LogsService) {
+elasticsdemoApp.controller('LogsController', function ($scope, resolvedLogs, LogsService) {
         $scope.loggers = resolvedLogs;
 
         $scope.changeLevel = function (name, level) {
@@ -270,7 +270,7 @@ esdemoApp.controller('LogsController', function ($scope, resolvedLogs, LogsServi
         }
     });
 
-esdemoApp.controller('AuditsController', function ($scope, $translate, $filter, AuditsService) {
+elasticsdemoApp.controller('AuditsController', function ($scope, $translate, $filter, AuditsService) {
         $scope.onChangeDate = function() {
             AuditsService.findByDates($scope.fromDate, $scope.toDate).then(function(data){
                 $scope.audits = data;

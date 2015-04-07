@@ -2,10 +2,10 @@
 
 /* App Module */
 
-var esdemoApp = angular.module('esdemoApp', ['http-auth-interceptor', 'tmh.dynamicLocale',
-    'ngResource', 'ngRoute', 'ngCookies', 'esdemoAppUtils', 'pascalprecht.translate', 'truncate', 'ngCacheBuster']);
+var elasticsdemoApp = angular.module('elasticsdemoApp', ['http-auth-interceptor', 'tmh.dynamicLocale',
+    'ngResource', 'ngRoute', 'ngCookies', 'elasticsdemoAppUtils', 'pascalprecht.translate', 'truncate', 'ngCacheBuster']);
 
-esdemoApp
+elasticsdemoApp
     .config(function ($routeProvider, $httpProvider, $translateProvider, tmhDynamicLocaleProvider, httpRequestInterceptorCacheBusterProvider, USER_ROLES) {
 
             //Cache everything except rest api requests

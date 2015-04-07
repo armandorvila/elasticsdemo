@@ -1,4 +1,4 @@
-angular.module('esdemoAppUtils', [])
+angular.module('elasticsdemoAppUtils', [])
     .service('Base64Service', function () {
         var keyStr = "ABCDEFGHIJKLMNOP" +
             "QRSTUVWXYZabcdef" +

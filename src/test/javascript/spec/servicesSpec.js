@@ -2,7 +2,7 @@
 
 describe('Services Tests ', function () {
 
-    beforeEach(module('esdemoApp'));
+    beforeEach(module('elasticsdemoApp'));
 
     describe('AuthenticationSharedService', function () {
         var serviceTested,

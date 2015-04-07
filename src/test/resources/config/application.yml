@@ -4,7 +4,7 @@ server:
 
 
 # security configuration (this key should be unique for your application, and kept secret)
-jhipster.security.rememberme.key: esdemo
+jhipster.security.rememberme.key: elasticsdemo
 
 async:
     corePoolSize: 2
@@ -16,7 +16,7 @@ spring:
     
     datasource:
         dataSourceClassName: org.h2.jdbcx.JdbcDataSource
-        url: jdbc:h2:mem:esdemo;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:mem:elasticsdemo;DB_CLOSE_DELAY=-1
         databaseName:
         serverName:
         username:
