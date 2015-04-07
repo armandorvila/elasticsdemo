@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "baseName": "esdemo",
+    "packageName": "com.armandorv.esdemo",
+    "packageFolder": "com/armandorv/esdemo",
+    "authenticationType": "cookie",
+    "hibernateCache": "hazelcast",
+    "clusteredHttpSession": "hazelcast",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8"
+  }
+}

@@ -1,1 +1,2 @@
-== Elastic Search DEMO
+README for esdemo
+==========================
